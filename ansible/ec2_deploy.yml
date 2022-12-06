@@ -21,8 +21,8 @@
 
     - name: Add instance host to group
       add_host:
-        host_name: "{{ item.public_ip }}"
-        group_name: launched
+        hostname: "{{ item.public_ip }}"
+        groupname: launched
       loop: "{{ ec2.instances }}"
 
     - name: Wait for ssh connection
